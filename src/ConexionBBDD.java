@@ -21,7 +21,7 @@ public class ConexionBBDD implements InterfazBBDD {
 
 		try {
 			Properties p = new Properties();
-			p.load(new FileInputStream("C:\\Users\\Nacho\\Desktop\\AppJaime v.2\\src\\param.ini"));
+			p.load(new FileInputStream("param.ini"));
 			login = p.getProperty("Usuario");
 			pwd = p.getProperty("Contrasena");
 		} catch (Exception e) {
