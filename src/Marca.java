@@ -1,6 +1,9 @@
 
 public class Marca {
-	
+
+	String id_fabricante;
+	String Nombre;
+	String Sede;
 	
 	public Marca(String id_fabricante, String nombre, String sede) {
 		super();
@@ -28,7 +31,5 @@ public class Marca {
 		Sede = sede;
 	}
 
-	String id_fabricante;
-	String Nombre;
-	String Sede;
+
 }
