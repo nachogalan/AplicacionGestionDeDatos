@@ -5,7 +5,6 @@ public class Coche {
     String descripcion;
     String caracteristica1;
     String caracteristica2;
-    
     Marca marca;
 
 	public Coche(String id, String nombre, String descripcion, String caracteristica1, String caracteristica2,
@@ -17,6 +16,10 @@ public class Coche {
 		this.caracteristica1 = caracteristica1;
 		this.caracteristica2 = caracteristica2;
 		this.marca = marca;
+	}
+	
+	public Coche() {
+		
 	}
 
 	public String getId() {

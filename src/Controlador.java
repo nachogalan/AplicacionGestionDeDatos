@@ -2,8 +2,6 @@ public class Controlador {
 
     InterfazBBDD acces;
 
-
-
     public InterfazBBDD getAcces() {
         return acces;
     }

@@ -17,9 +17,11 @@ public class Main {
         while (!salir) {
             System.out.println("");
             System.out.println("");
+            System.out.println("");
             System.out.print("Pulse 1 si desea gestionar la BBDD" + "\n");
             System.out.print("Pulse 2 si desea gestionar el fichero " + "\n");
-            System.out.print("Pulse 3 para terminar el programa " + "\n");
+            System.out.print("Pulse 3 si desea gestionar con hibernate " + "\n");
+            System.out.print("Pulse 4 para terminar el programa " + "\n");
 
             sc = new Scanner(System.in);
             eleccion = sc.nextInt();
@@ -34,6 +36,9 @@ public class Main {
                     control.acces = new GestionArchivos();
                     break;
                 case 3:
+                    control.acces = new gestionHibernate();
+                    break;
+                case 4:
                     System.exit(0);
                     break;
             }
