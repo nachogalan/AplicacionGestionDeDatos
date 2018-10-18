@@ -29,7 +29,7 @@ public class ConexionBBDD implements InterfazBBDD {
 		}
 
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
+			Class.forName("com.mysql.jdbc.Driver");
 			conexion = DriverManager.getConnection(url, login, pwd);
 			// Quitamos esta instrucción: conexion.close();
 			System.out.println(" - Conexión con MySQL establecida -");

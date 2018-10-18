@@ -9,11 +9,9 @@ import javax.security.auth.login.Configuration;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import com.mysql.cj.xdevapi.SessionFactory;
+
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
 
 import java.util.Iterator;
@@ -31,22 +29,6 @@ public class gestionHibernate implements InterfazBBDD {
 
 	@Override
 	public void Leer() throws SQLException, FileNotFoundException {
-    	
-		 Session session;
-
-	        System.out.print("Inicio de consulta simple empleados");
-	        SessionFactory sf = new Configuration().configure().buildSessionFactory();
-	        Session s =sf.openSession();
-	        Query q = s.createQuery("Select e from Employee e");
-	        List results = q.list();
-	        Iterator empleadosIterator = results.iterator();
-
-	        while (empleadosIterator.hasNext()){
-
-	            Employee empleado = (Employee)empleadosIterator.next();
-	            System.out.print("name "+ empleado.getEmpName() + "\n" );
-
-	        }
 		
 	}
 
