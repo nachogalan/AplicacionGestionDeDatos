@@ -1,15 +1,14 @@
 package modelo;
-
 public class Coche {
 
-    String id;    
+    int id;    
     String nombre;
     String descripcion;
     String caracteristica1;
     String caracteristica2;
     Marca marca;
 
-	public Coche(String id, String nombre, String descripcion, String caracteristica1, String caracteristica2,
+	public Coche(int id, String nombre, String descripcion, String caracteristica1, String caracteristica2,
 			Marca marca) {
 		super();
 		this.id = id;
@@ -24,11 +23,11 @@ public class Coche {
 		
 	}
 
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
