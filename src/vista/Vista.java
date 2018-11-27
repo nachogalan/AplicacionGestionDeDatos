@@ -1,4 +1,4 @@
-package modelo;
+package vista;
 
 /*
  *Creado por Elias Periañez
@@ -12,14 +12,36 @@ ________________________________________________________________________________
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
 
-public interface Data {
+import java.util.Scanner;
 
-	public void updateCoche(Coche ch);
-	public void uploadCoche(Coche ch);
-	public void deleteCoche(Coche ch);
-	public Coche[] getCoche();
-	public void updateMarca(Marca mc);
-	public void uploadMarca(Marca mc);
-	public void deleteMarca(Marca mc);
-	public Marca[] getMarca();
+import modelo.Coche;
+
+public class Vista {
+
+	private static Scanner sc = new Scanner(System.in);
+
+	public static String askData(String s) {
+		if (!s.equals("")) {
+			System.out.println(s);
+		}
+		return sc .nextLine();
+	}
+
+	public static void printErrLn(String s) {
+		System.err.println(s);
+	}
+	
+	public static void print(String s) {
+		System.out.print(s);
+	}
+	
+	public static void printErr(String s) {
+		System.err.print(s);
+	}
+	
+	public static void printLn(String s) {
+		System.out.println(s);
+	}
+
+
 }

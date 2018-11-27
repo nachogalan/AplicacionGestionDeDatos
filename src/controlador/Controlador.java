@@ -1,9 +1,11 @@
+package controlador;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Properties;
 
 import modelo.Configurador;
 import modelo.Data;
+import vista.Vista;
 
 public class Controlador {
 
@@ -30,16 +32,13 @@ public class Controlador {
 
 		String option = hs.get(Integer.parseInt(Vista.askData("Introduzca un numero asociado a una opcion:")));
 		Class cl = null;
+		Data dt = null;
 		try {
 			cl = Class.forName("modelo."+menuData.getProperty(option));
-		} catch (ClassNotFoundException e) {
+			dt = (Data) cl.newInstance();
+		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
 			e.printStackTrace();
 		}
-		Object tmp = (Object) cl;
-		
-		Data d = (Data) tmp;
-
-		d.getData();
 		
 	}
 }
