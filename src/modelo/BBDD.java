@@ -45,26 +45,24 @@ public class BBDD implements Data {
 		} catch (ClassNotFoundException | IOException | SQLException e) {
 			e.printStackTrace();
 		}
-
 	}
-
 
 	@Override
 	public void updateCoche(Coche ch) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override
 	public void uploadCoche(Coche ch) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override
 	public void deleteCoche(Coche ch) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override
@@ -76,19 +74,19 @@ public class BBDD implements Data {
 	@Override
 	public void updateMarca(Marca mc) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override
 	public void uploadMarca(Marca mc) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override
 	public void deleteMarca(Marca mc) {
 		// TODO Apéndice de método generado automáticamente
-		
+
 	}
 
 	@Override

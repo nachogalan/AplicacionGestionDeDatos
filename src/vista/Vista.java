@@ -24,24 +24,27 @@ public class Vista {
 		if (!s.equals("")) {
 			System.out.println(s);
 		}
-		return sc .nextLine();
+		return sc.nextLine();
 	}
 
 	public static void printErrLn(String s) {
 		System.err.println(s);
 	}
-	
+
 	public static void print(String s) {
 		System.out.print(s);
 	}
-	
+
 	public static void printErr(String s) {
 		System.err.print(s);
 	}
-	
+
 	public static void printLn(String s) {
 		System.out.println(s);
 	}
 
+	public static void retornoLinea() {
+		System.out.println();
+	}
 
 }

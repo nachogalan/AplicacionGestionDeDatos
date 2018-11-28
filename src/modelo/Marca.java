@@ -25,6 +25,9 @@ public class Marca {
 		Sede = sede;
 	}
 	
+	public Marca() {
+	}
+
 	public int getId_fabricante() {
 		return id_fabricante;
 	}

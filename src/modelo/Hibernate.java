@@ -1,7 +1,5 @@
 package modelo;
 
-import vista.Vista;
-
 /*
  *Creado por Elias Periañez
  *27 nov. 2018
@@ -13,7 +11,6 @@ ________________________________________________________________________________
  *As part of the project AppJaime v.2
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
-
 public class Hibernate implements Data {
 
 	@Override
