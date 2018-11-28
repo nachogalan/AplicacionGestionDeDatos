@@ -4,7 +4,7 @@
 
 <hibernate-mapping>
 
-    <class name="Coche" table="coches">
+    <class name="modelo.Coche" table="coches">
         <id name="Id" type="int">
             <column name="ID" />
             <generator class="increment" />

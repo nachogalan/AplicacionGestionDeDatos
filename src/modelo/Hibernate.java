@@ -1,5 +1,15 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.cfg.Configuration;
+import org.hibernate.resource.transaction.spi.TransactionStatus;
+
+
 /*
  *Creado por Elias Periañez
  *27 nov. 2018
@@ -13,51 +23,83 @@ ________________________________________________________________________________
  */
 public class Hibernate implements Data {
 
+	private Session	s = new Configuration().configure("/Hibernate/hibernate.cfg.xml").buildSessionFactory().openSession();
+	
+	private void beginTransaction() {
+		if(s.getTransaction().getStatus()!=TransactionStatus.ACTIVE) {
+		s.beginTransaction();
+		}
+	}
+	
+	
 	@Override
 	public void updateCoche(Coche ch) {
-		
+		this.beginTransaction();
+		s.update(ch);
 	}
 
 	@Override
 	public void uploadCoche(Coche ch) {
-		// TODO Apéndice de método generado automáticamente
-		
+		this.beginTransaction();
+		s.save(ch);
 	}
 
 	@Override
 	public void deleteCoche(Coche ch) {
-		// TODO Apéndice de método generado automáticamente
-		
+		this.beginTransaction();
+		s.delete(ch);
 	}
 
 	@Override
-	public Coche[] getCoche() {
-		// TODO Apéndice de método generado automáticamente
-		return null;
+	public HashMap<Integer, Coche> getCoche() {
+		this.beginTransaction();
+		HashMap<Integer, Coche> result = new HashMap<Integer, Coche>();
+		Query q = s.createQuery("Select e from Coche e");
+		
+		@SuppressWarnings("unchecked")
+		Iterator<Coche> datos = q.list().iterator();
+		
+		int i = 0;
+		while (datos.hasNext()) {
+			result.put(i, datos.next());
+			i++;
+		}
+		return result;
 	}
 
 	@Override
 	public void updateMarca(Marca mc) {
-		// TODO Apéndice de método generado automáticamente
-		
+		this.beginTransaction();
+		s.update(mc);
 	}
 
 	@Override
 	public void uploadMarca(Marca mc) {
-		// TODO Apéndice de método generado automáticamente
-		
+		this.beginTransaction();
+		s.save(mc);
 	}
 
 	@Override
 	public void deleteMarca(Marca mc) {
-		// TODO Apéndice de método generado automáticamente
-		
+		this.beginTransaction();
+		s.delete(mc);
 	}
 
 	@Override
-	public Marca[] getMarca() {
-		// TODO Apéndice de método generado automáticamente
-		return null;
+	public HashMap<Integer, Marca> getMarca() {
+		this.beginTransaction();
+		HashMap<Integer, Marca> result = new HashMap<Integer, Marca>();
+		Query q = s.createQuery("Select e from Marca e");
+		
+		@SuppressWarnings("unchecked")
+		Iterator<Marca> datos = q.list().iterator();
+		
+		int i = 0;
+		while (datos.hasNext()) {
+			result.put(i, datos.next());
+			i++;
+		}
+		return result;
 	}
 
 }

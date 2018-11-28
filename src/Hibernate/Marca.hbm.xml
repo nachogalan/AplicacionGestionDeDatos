@@ -4,7 +4,7 @@
 
 <hibernate-mapping>
 
-    <class name="Marca" table="marca">
+    <class name="modelo.Marca" table="marca">
 
         <id name="id_fabricante" type="int">
             <column name="ID_Fabricante" />

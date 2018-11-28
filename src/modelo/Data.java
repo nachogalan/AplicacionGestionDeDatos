@@ -1,5 +1,8 @@
 package modelo;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 /*
  *Creado por Elias Periañez
  *27 nov. 2018
@@ -17,9 +20,9 @@ public interface Data {
 	public void updateCoche(Coche ch);
 	public void uploadCoche(Coche ch);
 	public void deleteCoche(Coche ch);
-	public Coche[] getCoche();
+	public HashMap<Integer, Coche> getCoche();
 	public void updateMarca(Marca mc);
 	public void uploadMarca(Marca mc);
 	public void deleteMarca(Marca mc);
-	public Marca[] getMarca();
+	public HashMap<Integer, Marca> getMarca();
 }
