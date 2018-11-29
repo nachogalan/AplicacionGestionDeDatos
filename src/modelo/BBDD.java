@@ -12,6 +12,8 @@ ________________________________________________________________________________
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
 
+import org.omg.CORBA.MARSHAL;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
@@ -55,7 +57,23 @@ public class BBDD implements Data {
     }
 
     @Override
-    public void uploadCoche(Coche ch) {
+    public void uploadCoche(Coche ch) throws SQLException {
+
+        String query = " insert into coches (Id, Nombre, Descripcion, Caracteristica1, Caracteristica2, ID_Fabricante)"
+                + " values (?, ?, ?, ?, ?, ?)";
+
+        int r = 0;
+
+        PreparedStatement preparedStmt = conexion.prepareStatement(query);
+        preparedStmt.setString(1, Integer.toString(ch.getId()));
+        preparedStmt.setString(2, ch.getNombre());
+        preparedStmt.setString(3, ch.getDescripcion());
+        preparedStmt.setString(4, ch.getCaracteristica1());
+        preparedStmt.setString(5, ch.getCaracteristica2());
+        preparedStmt.setString(6, Integer.toString(ch.getMarca().getId_fabricante()));
+
+
+            r = preparedStmt.executeUpdate();
 
     }
 
@@ -65,9 +83,45 @@ public class BBDD implements Data {
     }
 
     @Override
-    public HashMap<Integer, Coche> getCoche() {
-        return null;
+    public HashMap<Integer, Coche> getCoche() throws SQLException {
+
+        HashMap<Integer, Coche> listaCoches = new HashMap<Integer, Coche>();
+
+        String Query = "SELECT * FROM coches";
+        PreparedStatement preparedStmt = conexion.prepareStatement(Query);
+        java.sql.ResultSet resultSet;
+        resultSet = preparedStmt.executeQuery(Query);
+
+        while (resultSet.next()) {
+
+            int id = resultSet.getInt("ID");
+            String nombre = resultSet.getString("Nombre");
+            String descripcion = resultSet.getString("Descripcion");
+            String caracteristica1 = resultSet.getString("Caracteristica1");
+            String caracteristica2 = resultSet.getString("Caracteristica2");
+            String id_Fabricante = resultSet.getString("ID_Fabricante");
+
+            System.out.println("ID: " + " " + id + "\n" + "Nombre: " + " "
+                    + nombre + "\n" + "Descripcion" + " "
+                    + descripcion + "\n" + "Caracteristica1: " + " "
+                    + caracteristica1 + "\n" + "Caracteristica2: " + " "
+                    + caracteristica2 + "\n" + "\n" + "Fabricante: " + " "
+                    + id_Fabricante + "\n");
+            
+            coche.setId(id);
+            coche.setNombre(nombre);
+            coche.setDescripcion(descripcion);
+            coche.setCaracteristica1(caracteristica1);
+            coche.setCaracteristica2(caracteristica2);
+            coche.setMarca(marca);
+
+            listaCoches.put(id,coche);
+        }
+
+        return listaCoches;
     }
+
+
 
     @Override
     public void updateMarca(Marca mc) {
