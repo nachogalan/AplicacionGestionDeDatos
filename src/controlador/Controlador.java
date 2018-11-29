@@ -1,6 +1,7 @@
 package controlador;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -16,7 +17,7 @@ import vista.Vista;
 
 public class Controlador {
 
-	public static void start() {
+	public static void start() throws SQLException {
 		Properties menuData = new Properties();
 
 		try {
@@ -49,7 +50,7 @@ public class Controlador {
 		menu(dt);
 	}
 
-	public static Coche getCoche(Data caller) {
+	public static Coche getCoche(Data caller) throws SQLException {
 		Coche result = new Coche();
 		boolean check = false;
 		while (!check) {
@@ -106,7 +107,7 @@ public class Controlador {
 
 	}
 
-	private static void menu(Data caller) {
+	private static void menu(Data caller) throws SQLException {
 		Vista.printLn("Elige si trabajar con marcas o con coches:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Marcas");
@@ -131,7 +132,7 @@ public class Controlador {
 		}
 	}
 
-	private static void menuMarcas(Data caller) {
+	private static void menuMarcas(Data caller) throws SQLException {
 		Vista.printLn("Elija una opcion:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Ver marcas actuales");
@@ -179,7 +180,7 @@ public class Controlador {
 		}
 	}
 
-	private static void menuCoches(Data caller) {
+	private static void menuCoches(Data caller) throws SQLException {
 		Vista.printLn("Elija una opcion:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Ver los coches actuales");

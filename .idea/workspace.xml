@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/ConexionBBDD.java" mnemonic="4" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a745c94-c22a-4f98-a8b5-40624327f838" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/antlr_2_7_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Hibernate/Marca.hbm.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppJaime v.2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AppJaime v.2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppJaime v.2/ConexionBBDD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppJaime v.2/GestionArchivos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppJaime v.2/InterfazBBDD.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AppJaime v.2/Marca.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Hibernate/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Hibernate/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Marca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Marca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/BBDD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/BBDD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modelo/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/modelo/Data.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,33 +18,38 @@
     <session id="-2141435069">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="1" />
+          <entry key="java" value="4" />
           <entry key="xml" value="2" />
           <entry key="xxml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="1" />
+          <entry key="JAVA" value="4" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="6" />
+          <entry key="java" value="139" />
           <entry key="xml" value="42" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6" />
+          <entry key="JAVA" value="139" />
           <entry key="XML" value="42" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.checkout.remote" value="1" />
         </counts>
       </usages-collector>
     </session>
@@ -63,25 +57,42 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/InterfazBBDD.java">
+        <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Deprecated/ConexionBBDD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/modelo/BBDD.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="179">
+              <caret line="89" column="65" selection-start-line="89" selection-start-column="65" selection-end-line="89" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2221#2222#0" expanded="true" />
+                <element signature="e#2248#2249#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
+        <entry file="file://$PROJECT_DIR$/src/modelo/Data.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -100,48 +111,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="12" column="30" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Marca.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controlador.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ConexionBBDD.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/GestionArchivos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -168,6 +137,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -183,6 +157,7 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Hibernate/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/Marca.java" />
+        <option value="$PROJECT_DIR$/src/modelo/BBDD.java" />
       </list>
     </option>
   </component>
@@ -208,7 +183,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -225,12 +199,19 @@
               <item name="AplicacionGestionDeDatos" type="b2602c69:ProjectViewProjectNode" />
               <item name="AplicacionGestionDeDatos" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Hibernate" type="462c0819:PsiDirectoryNode" />
+              <item name="Deprecated" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AplicacionGestionDeDatos" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AplicacionGestionDeDatos" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="modelo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -241,7 +222,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-5.1.22-bin.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -318,17 +299,18 @@
       <workItem from="1538047007707" duration="5089000" />
       <workItem from="1538392347119" duration="4719000" />
       <workItem from="1539864988472" duration="831000" />
+      <workItem from="1543493874035" duration="1152000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20109000" />
+    <option name="totallyTimeSpent" value="21261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26346666" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -355,7 +337,7 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" visible="true" weight="0.0" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.3296" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25546667" />
@@ -539,13 +521,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/InterfazArchivos.java" />
     <entry file="file://$PROJECT_DIR$/src/param.ini" />
-    <entry file="file://$PROJECT_DIR$/src/InterfazBBDD.java">
+    <entry file="file://$PROJECT_DIR$/src/Hibernate/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Hibernate/Marca.hbm.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="30" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -579,34 +565,53 @@
     <entry file="file://$PROJECT_DIR$/fichero.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Marca.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="357">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/InterfazBBDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hibernate/hibernate.cfg.xml">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Hibernate/Marca.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/src/Deprecated/ConexionBBDD.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="30" />
+        <state relative-caret-position="-612">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Marca.java">
+    <entry file="file://$PROJECT_DIR$/src/modelo/Data.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="33" column="4" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+        <state relative-caret-position="272">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/modelo/BBDD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="89" column="65" selection-start-line="89" selection-start-column="65" selection-end-line="89" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="e#2248#2249#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
