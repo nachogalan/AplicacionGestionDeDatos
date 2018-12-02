@@ -22,11 +22,12 @@ import java.util.Properties;
 
 public class BBDD implements Data {
 
-	private String bd = "abd_coches?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC";
+	private String bd = "";
 	private String login = "";
 	private String pwd = "";
-	private String url = "jdbc:mysql://localhost/" + bd;
-	private Connection conexion;
+	private Conexion conexion;
+	private String tableCoche = "";
+	private String tableMarca = "";
 	Marca marca = new Marca(0, "", "");
 	Coche coche = new Coche(0, "", "", "", "", marca);
 	HashMap<String, Marca> marcaMap = new HashMap<>();
@@ -34,23 +35,25 @@ public class BBDD implements Data {
 
 	public BBDD() {
 
-		try {
 			Properties p = new Properties();
-			p.load(new FileInputStream("bbdd.ini"));
-			login = p.getProperty("Usuario");
-			pwd = p.getProperty("Contrasena");
-			Class.forName("com.mysql.jdbc.Driver");
-			conexion = DriverManager.getConnection(url, login, pwd);
-			System.out.println(" - Conexión con MySQL establecida -");
-		} catch (ClassNotFoundException | IOException | SQLException e) {
-			e.printStackTrace();
-		}
+			try {
+				p.load(new FileInputStream("bbdd.ini"));
+				login = p.getProperty("Usuario");
+				pwd = p.getProperty("Contrasena");
+				tableCoche = p.getProperty("tablaCoche");
+				tableMarca = p.getProperty("tablaMarca");
+				bd = p.getProperty("db");
+				conexion = new Conexion(bd, login, pwd, true);
+				System.out.println(" - Conexión con MySQL establecida -");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+
 	}
 
 	@Override
 	public void updateCoche(Coche ch) {
-		// TODO Apéndice de método generado automáticamente
-
+		conexion.editarDatos(tableCoche, columnas, valores, condicion)
 	}
 
 	@Override
@@ -66,7 +69,7 @@ public class BBDD implements Data {
 	}
 
 	@Override
-	public Coche[] getCoche() {
+	public HashMap<Integer, Coche> getCoche() {
 		// TODO Apéndice de método generado automáticamente
 		return null;
 	}
@@ -90,7 +93,7 @@ public class BBDD implements Data {
 	}
 
 	@Override
-	public Marca[] getMarca() {
+	public HashMap<Integer, Marca> getMarca() {
 		// TODO Apéndice de método generado automáticamente
 		return null;
 	}
