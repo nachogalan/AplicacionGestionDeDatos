@@ -12,7 +12,6 @@ ________________________________________________________________________________
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
 
-import org.omg.CORBA.MARSHAL;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,7 +19,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -107,7 +105,7 @@ public class BBDD implements Data {
                     + caracteristica1 + "\n" + "Caracteristica2: " + " "
                     + caracteristica2 + "\n" + "\n" + "Fabricante: " + " "
                     + id_Fabricante + "\n");
-            
+
             coche.setId(id);
             coche.setNombre(nombre);
             coche.setDescripcion(descripcion);
@@ -130,6 +128,8 @@ public class BBDD implements Data {
 
     @Override
     public void uploadMarca(Marca mc) throws SQLException {
+
+
 
         String query = " insert into marca (ID_Fabricante, Nombre, Sede)" + " values (?, ?, ?)";
 

@@ -1,5 +1,8 @@
 import controlador.Controlador;
 
+import java.io.IOException;
+import java.sql.SQLException;
+
 /*
  *Creado por Elias Periañez
  *27 nov. 2018
@@ -16,7 +19,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Iniciadno el programa");
-		Controlador.start();
+		try {
+			Controlador.start();
+		} catch (SQLException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }

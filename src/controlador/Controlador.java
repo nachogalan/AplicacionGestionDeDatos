@@ -1,5 +1,6 @@
 package controlador;
 
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import vista.Vista;
 
 public class Controlador {
 
-	public static void start() throws SQLException {
+	public static void start() throws SQLException, IOException {
 		Properties menuData = new Properties();
 
 		try {
@@ -107,7 +108,7 @@ public class Controlador {
 
 	}
 
-	private static void menu(Data caller) throws SQLException {
+	private static void menu(Data caller) throws SQLException, IOException {
 		Vista.printLn("Elige si trabajar con marcas o con coches:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Marcas");
@@ -132,7 +133,7 @@ public class Controlador {
 		}
 	}
 
-	private static void menuMarcas(Data caller) throws SQLException {
+	private static void menuMarcas(Data caller) throws SQLException, IOException {
 		Vista.printLn("Elija una opcion:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Ver marcas actuales");
@@ -180,7 +181,7 @@ public class Controlador {
 		}
 	}
 
-	private static void menuCoches(Data caller) throws SQLException {
+	private static void menuCoches(Data caller) throws SQLException, IOException {
 		Vista.printLn("Elija una opcion:");
 		Vista.retornoLinea();
 		Vista.printLn("1.Ver los coches actuales");
@@ -222,7 +223,7 @@ public class Controlador {
 			default:
 				throw new NumberFormatException();
 			}
-		} catch (NumberFormatException e) {
+		} catch (NumberFormatException | FileNotFoundException e) {
 			Vista.printErrLn("Numero incorrecto, vuelve a intentarlo");
 			menuCoches(caller);
 		}

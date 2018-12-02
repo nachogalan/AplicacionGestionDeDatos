@@ -1,5 +1,7 @@
 package modelo;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,11 +21,11 @@ ________________________________________________________________________________
 public interface Data {
 
 	public void updateCoche(Coche ch);
-	public void uploadCoche(Coche ch) throws SQLException;
+	public void uploadCoche(Coche ch) throws SQLException, IOException;
 	public void deleteCoche(Coche ch);
-	public HashMap<Integer, Coche> getCoche() throws SQLException;
+	public HashMap<Integer, Coche> getCoche() throws SQLException, FileNotFoundException;
 	public void updateMarca(Marca mc);
-	public void uploadMarca(Marca mc) throws SQLException;
+	public void uploadMarca(Marca mc) throws SQLException, IOException;
 	public void deleteMarca(Marca mc);
 	public HashMap<Integer, Marca> getMarca() throws SQLException;
 }
