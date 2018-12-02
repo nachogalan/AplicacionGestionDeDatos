@@ -53,7 +53,7 @@ public class BBDD implements Data {
 
 	@Override
 	public void updateCoche(Coche ch) {
-		conexion.editarDatos(tableCoche, columnas, valores, condicion)
+		//conexion.editarDatos(tableCoche, columnas, valores, condicion)
 	}
 
 	@Override
