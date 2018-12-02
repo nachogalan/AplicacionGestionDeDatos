@@ -47,5 +47,16 @@ public class Marca {
 		Sede = sede;
 	}
 
-
+	public String toString(){
+		String aux ="";
+		
+		aux += "------------------------------------------";
+		aux += "\n	ID: " + this.id_fabricante;
+		aux += "\n	NOMBRE: " + this.Nombre;
+		aux += "\n	SEDE: " + this.Sede;
+		aux += "\n------------------------------------------";
+		
+		return aux;
+	}
+	
 }

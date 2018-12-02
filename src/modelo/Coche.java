@@ -83,6 +83,22 @@ public class Coche {
 	public void setMarca(Marca marca) {
 		this.marca = marca;
 	}
-
+	
+	@Override
+	public String toString(){
+		String aux ="";
+		
+		aux += "------------------------------------------";
+		aux += "\n	ID: " + this.id;
+		aux += "\n	NOMBRE: " + this.nombre;
+		aux += "\n	CARACTERISTICA 1: " + this.caracteristica1;
+		aux += "\n	CARACTERISTICA 2: " + this.caracteristica2;
+		aux += "\n	ID MARCA: " + this.marca.id_fabricante;
+		aux += "\n------------------------------------------";
+		
+		return aux;
+	}
+	
+	
    
 }
