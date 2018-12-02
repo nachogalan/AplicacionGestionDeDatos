@@ -103,9 +103,10 @@ public class File implements Data {
     @Override
     public void uploadMarca(Marca mc) throws SQLException, IOException {
 
-        String id_fabricante =Integer.toString(marca.getId_fabricante());
-        String nombre = marca.getNombre();
-        String sede = marca.getSede();
+        String id_fabricante =Integer.toString(mc.getId_fabricante());
+        String nombre = mc.getNombre();
+        String sede = mc.getSede();
+
 
         FileWriter   fichero = new FileWriter("marcas.txt", true);
 
