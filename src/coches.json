@@ -1,0 +1,34 @@
+[
+{
+	"ID": "1",
+	"Nombre": "PeneGigante",
+	"Descripcion": "Demasiado bueno pa ti",
+	"Caracteristica1": "bonito",
+	"Caracteristica2": "amarillo",
+    "Marca": {
+        "ID_Fabricante": "1",
+        "Nombre": "Toyota",
+        "Sede": "Japan"
+    },
+    "ID": "2",
+	"Nombre": "Te lo compro",
+	"Descripcion": "Te lo compro de unas pim pam",
+	"Caracteristica1": "Comprao",
+	"Caracteristica2": "Comprao",
+    "Marca": {
+        "ID_Fabricante": "2",
+        "Nombre": "Ferrari",
+        "Sede": "Italia"
+    },
+    "ID": "3",
+	"Nombre": "PeneGigante",
+	"Descripcion": "Demasiado bueno pa ti",
+	"Caracteristica1": "bonito",
+	"Caracteristica2": "amarillo",
+    "Marca": {
+        "ID_Fabricante": "1",
+        "Nombre": "Toyota",
+        "Sede": "Japan"
+    },
+}
+]
