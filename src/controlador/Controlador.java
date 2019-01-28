@@ -13,6 +13,7 @@ import java.util.Properties;
 import modelo.Coche;
 import modelo.Configurador;
 import modelo.Data;
+import modelo.JSON;
 import modelo.Marca;
 import vista.Vista;
 
@@ -184,12 +185,18 @@ public class Controlador {
 	private static void menuCoches(Data caller) throws SQLException, IOException {
 		Vista.printLn("Elija una opcion:");
 		Vista.retornoLinea();
-		Vista.printLn("1.Ver los coches actuales");
-		Vista.printLn("2.Crear nuevo coche");
-		Vista.printLn("3.Actualizar un coche");
-		Vista.printLn("4.Borrar un coche");
-		Vista.printLn("5.Volver atras");
-		Vista.printLn("6.Salir");
+		if(JSON.class.isInstance(caller)) {
+			
+			Vista.printLn("Pulse 1 para continuar");
+		} else {
+			Vista.printLn("1.Ver los coches actuales");
+			Vista.printLn("2.Crear nuevo coche");
+			Vista.printLn("3.Actualizar un coche");
+			Vista.printLn("4.Borrar un coche");
+			Vista.printLn("5.Volver atras");
+			Vista.printLn("6.Salir");
+		}
+		
 
 		try {
 			switch (Integer.parseInt(Vista.askData(""))) {
