@@ -23,6 +23,7 @@ public interface Data {
 	public void updateCoche(Coche ch);
 	public void uploadCoche(Coche ch) throws SQLException, IOException;
 	public void deleteCoche(Coche ch);
+
 	public HashMap<Integer, Coche> getCoche() throws SQLException, FileNotFoundException;
 	public void updateMarca(Marca mc);
 	public void uploadMarca(Marca mc) throws SQLException, IOException;

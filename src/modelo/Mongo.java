@@ -41,18 +41,23 @@ public class Mongo implements Data {
 
 	@Override
 	public void deleteCoche(Coche ch) {
-	
-
+		int id = ch.getId();
 		MongoCollection<Document> data = db.getCollection("coches");
 		FindIterable<Document> cursor = data.find();
-
+		System.out.println(id);
 		for (Document document : cursor) {
-			if (document.getInteger("ID") == ch.getId()) {
-				//document.remove();
-			}else {
-				System.out.println("Nacho es gei jajaja");
+			System.out.println("hola");
+			if (document.getInteger("ID") == id) {
+				Coche coche = new Coche();
+				coche.setId(id);
+				
+				document.remove(data.findOneAndDelete(document).get(id));
 			}
-		}
+	}
+
+	}
+	
+	public void deleteDelCoche(int id) {
 
 	}
 
