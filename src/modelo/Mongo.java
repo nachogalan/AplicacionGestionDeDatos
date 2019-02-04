@@ -57,9 +57,6 @@ public class Mongo implements Data {
 
 	}
 	
-	public void deleteDelCoche(int id) {
-
-	}
 
 	@Override
 	public HashMap<Integer, Coche> getCoche() throws SQLException, FileNotFoundException {
@@ -94,9 +91,19 @@ public class Mongo implements Data {
 
 	@Override
 	public void deleteMarca(Marca mc) {
-		HashMap<Integer, Marca> result = new HashMap<Integer, Marca>();
+		int id = mc.getId_fabricante();
 		MongoCollection<Document> data = db.getCollection("marcas");
 		FindIterable<Document> cursor = data.find();
+		System.out.println(id);
+		for (Document document : cursor) {
+			System.out.println("hola");
+			if (document.getInteger("ID_Fabricante") == id) {
+				Marca coche = new Marca();
+				coche.setId_fabricante(id);
+				
+				document.remove(data.findOneAndDelete(document).get(id));
+			}
+	}
 	}
 
 	@Override
