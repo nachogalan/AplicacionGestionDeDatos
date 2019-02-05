@@ -26,9 +26,24 @@ public class Mongo implements Data {
 	}
 
 	@Override
-	public void updateCoche(Coche ch) {
-		// TODO Apéndice de método generado automáticamente
+	public void updateCoche(Coche ch, Coche oldCoche) {
+		Document newDocument = new Document();
+		Document mcDoc = new Document();
+		
+		mcDoc.append("ID_Fabricante", ch.getMarca().getId_fabricante());
+		newDocument.put("Nombre", ch.getMarca().getNombre());
+		newDocument.put("Sede", ch.getMarca().getSede());
+		
+		newDocument.put("ID", ch.getId());
+		newDocument.put("Nombre", ch.getNombre());
+		newDocument.put("Descripcion", ch.getDescripcion());
+		newDocument.put("Caracteristica1", ch.getCaracteristica1());
+		newDocument.put("Caracteristica2", ch.getCaracteristica2());
+		newDocument.put("Marca", mcDoc);
 
+
+		Document searchQuery = new Document().append("ID", ch.getId());
+		db.getCollection("marcas").updateOne(searchQuery, newDocument);
 	}
 
 	@Override
@@ -57,9 +72,14 @@ public class Mongo implements Data {
 	}
 
 	@Override
-	public void updateMarca(Marca mc) {
-		// TODO Apéndice de método generado automáticamente
-
+	public void updateMarca(Marca marca, Marca oldMarca) {
+		
+		Document newDocument = new Document();
+		newDocument.put("ID_Fabricante", marca.getId_fabricante());
+		newDocument.put("Nombre", marca.getNombre());
+		newDocument.put("Sede", marca.getSede());
+		Document searchQuery = new Document().append("ID_Fabricante", oldMarca.getId_fabricante());
+		db.getCollection("marcas").updateOne(searchQuery, newDocument);
 	}
 
 	@Override

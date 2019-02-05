@@ -68,26 +68,7 @@ public class Controlador {
 		result.setDescripcion(Vista.askData("Introduce la descripcion del coche: "));
 
 		Vista.retornoLinea();
-		HashMap<Integer, Marca> mcArray = caller.getMarca();
-		Map<Integer, Marca> mp = mcArray;
-		Iterator<Entry<Integer, Marca>> datos = mp.entrySet().iterator();
-
-		int i = 0;
-		while (datos.hasNext()) {
-			System.out.println(i + "." + datos.next().getValue());
-			i++;
-		}
-
-		Marca mc = null;
-		check = false;
-		while (!check) {
-			mc = mcArray.get(Integer.parseInt((Vista.askData("Introduce el numero de la marca del coche"))));
-
-			if (mc != null) {
-				result.setMarca(mc);
-				check = true;
-			}
-		}
+		result.setMarca(getExistingMarca(caller));
 		return result;
 	}
 
@@ -158,7 +139,8 @@ public class Controlador {
 				menuMarcas(caller);
 				break;
 			case 3:
-				caller.updateMarca(getMarca());
+				Vista.printLn("Introduce la marca nueva");
+				caller.updateMarca(getMarca(), getExistingMarca(caller));
 				menuMarcas(caller);
 				break;
 			case 4:
@@ -179,6 +161,31 @@ public class Controlador {
 			Vista.printErrLn("Numero incorrecto, vuelve a intentarlo");
 			menuMarcas(caller);
 		}
+	}
+
+	private static Marca getExistingMarca(Data caller) throws SQLException {
+		Marca result = new Marca();
+		HashMap<Integer, Marca> mcArray = caller.getMarca();
+		Map<Integer, Marca> mp = mcArray;
+		Iterator<Entry<Integer, Marca>> datos = mp.entrySet().iterator();
+
+		int i = 0;
+		while (datos.hasNext()) {
+			System.out.println(i + "." + datos.next().getValue());
+			i++;
+		}
+
+		Marca mc = null;
+		boolean check = false;
+		while (!check) {
+			mc = mcArray.get(Integer.parseInt((Vista.askData("Introduce el numero de la marca del coche"))));
+
+			if (mc != null) {
+				result = mc;
+				check = true;
+			}
+		}
+		return result;
 	}
 
 	private static void menuCoches(Data caller) throws SQLException, IOException {
@@ -206,7 +213,7 @@ public class Controlador {
 				menuCoches(caller);
 				break;
 			case 3:
-				caller.updateCoche(getCoche(caller));
+				caller.updateCoche(getCoche(caller), getExistingCar(caller));
 				menuCoches(caller);
 				break;
 			case 4:
@@ -227,5 +234,30 @@ public class Controlador {
 			Vista.printErrLn("Numero incorrecto, vuelve a intentarlo");
 			menuCoches(caller);
 		}
+	}
+
+	private static Coche getExistingCar(Data caller) throws FileNotFoundException, SQLException {
+		Coche result = new Coche();
+		HashMap<Integer, Coche> mcArray = caller.getCoche();
+		Map<Integer, Coche> mp = mcArray;
+		Iterator<Entry<Integer, Coche>> datos = mp.entrySet().iterator();
+
+		int i = 0;
+		while (datos.hasNext()) {
+			System.out.println(i + "." + datos.next().getValue());
+			i++;
+		}
+
+		Coche ch = null;
+		boolean check = false;
+		while (!check) {
+			ch = mcArray.get(Integer.parseInt((Vista.askData("Introduce el numero del coche"))));
+
+			if (ch != null) {
+				result = ch;
+				check = true;
+			}
+		}
+		return result;
 	}
 }

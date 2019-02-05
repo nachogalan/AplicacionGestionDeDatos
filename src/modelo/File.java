@@ -26,7 +26,7 @@ public class File implements Data {
     Marca marca = new Marca();
 
     @Override
-    public void updateCoche(Coche ch) {
+    public void updateCoche(Coche ch, Coche oldCoche) {
 
     }
 
@@ -96,11 +96,6 @@ public class File implements Data {
     }
 
     @Override
-    public void updateMarca(Marca mc) {
-
-    }
-
-    @Override
     public void uploadMarca(Marca mc) throws SQLException, IOException {
 
         String id_fabricante =Integer.toString(mc.getId_fabricante());
@@ -125,4 +120,10 @@ public class File implements Data {
     public HashMap<Integer, Marca> getMarca() throws SQLException {
         return null;
     }
+
+	@Override
+	public void updateMarca(Marca newMarca, Marca oldMarca) {
+		// TODO Apéndice de método generado automáticamente
+		
+	}
 }

@@ -1,6 +1,5 @@
 package modelo;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -68,9 +67,9 @@ public class Hibernate implements Data {
 	}
 
 	@Override
-	public void updateMarca(Marca mc) {
+	public void updateMarca(Marca marca, Marca oldMarca) {
 		this.beginTransaction();
-		s.update(mc);
+		s.update(marca);
 	}
 
 	@Override
