@@ -7,6 +7,8 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Properties;
 
+import javax.management.MXBean;
+
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
@@ -14,6 +16,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import modelo.Marca;
+import vista.Vista;
 
 public class Mongo implements Data {
 
@@ -35,8 +38,27 @@ public class Mongo implements Data {
 
 	@Override
 	public void uploadCoche(Coche ch) throws SQLException, IOException {
-		// TODO Apéndice de método generado automáticamente
-
+		
+		
+		
+		MongoCollection<Document> datacoches = db.getCollection("coches");
+		
+				Document documentmarca = new Document();
+				documentmarca.put("ID_Fabricante", ch.getMarca().getId_fabricante());
+				documentmarca.put("Nombre", ch.getMarca().getNombre());
+				documentmarca.put("Sede", ch.getMarca().getSede());
+				
+		
+		
+				Document documentDetail = new Document();
+				documentDetail.put("ID", ch.getId());
+				documentDetail.put("Nombre", ch.getNombre());
+				documentDetail.put("Descripcion", ch.getDescripcion());
+				documentDetail.put("Caracteristica1", ch.getCaracteristica1());
+				documentDetail.put("Caracteristica2", ch.getCaracteristica2());
+				documentDetail.put("Marca",documentmarca);
+				datacoches.insertOne(documentDetail);
+			
 	}
 
 	@Override
@@ -85,7 +107,16 @@ public class Mongo implements Data {
 
 	@Override
 	public void uploadMarca(Marca mc) throws SQLException, IOException {
-		// TODO Apéndice de método generado automáticamente
+		
+		MongoCollection<Document> data = db.getCollection("marcas");
+		Document documentDetail = new Document();
+		documentDetail.put("ID_Fabricante", mc.getId_fabricante());
+		documentDetail.put("Nombre", mc.getNombre());
+		documentDetail.put("Sede", mc.getSede());
+		
+		data.insertOne(documentDetail);
+		
+		
 
 	}
 
