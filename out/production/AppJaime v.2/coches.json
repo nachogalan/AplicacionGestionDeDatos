@@ -1,0 +1,36 @@
+[
+    {
+        "ID": 1,
+        "Nombre": "AE",
+        "Descripcion": "Demasiado bueno pa ti",
+        "Caracteristica1": "bonito", 
+        "Caracteristica2": "amarillo",
+        "Marca": {
+            "ID_Fabricante": 1,
+            "Nombre": "Toyota",
+            "Sede": "Japan"
+        }
+    }, {
+        "ID": 2,
+        "Nombre": "Te lo compro",
+        "Descripcion": "Te lo compro de unas pim pam",
+        "Caracteristica1": "Te lo compro pim pam fum",
+        "Caracteristica2": "Comprao",
+        "Marca": {
+            "ID_Fabricante": 2,
+            "Nombre": "Ferrari",
+            "Sede": "Italia"
+        }
+    }, {
+        "ID": 3,
+        "Nombre": "Ayyy ligmao",
+        "Descripcion": "Demasiado bueno pa ti",
+        "Caracteristica1": "bonito",
+        "Caracteristica2": "amarillo",
+        "Marca": {
+            "ID_Fabricante": 1,
+            "Nombre": "Toyota",
+            "Sede": "Japan"
+        }
+    }
+]

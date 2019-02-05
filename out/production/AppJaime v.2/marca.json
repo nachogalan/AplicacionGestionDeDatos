@@ -1,0 +1,12 @@
+[
+{
+		"ID_Fabricante": 1,
+        "Nombre": "Toyota",
+        "Sede": "Japan"
+},
+    {
+		"ID_Fabricante": 2,
+        "Nombre": "Ferrari",
+        "Sede": "Italia"
+}
+]

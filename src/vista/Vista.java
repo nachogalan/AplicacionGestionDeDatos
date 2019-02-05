@@ -1,7 +1,4 @@
-import controlador.Controlador;
-
-import java.io.IOException;
-import java.sql.SQLException;
+package vista;
 
 /*
  *Creado por Elias Periañez
@@ -15,15 +12,39 @@ ________________________________________________________________________________
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
 
-public class Main {
+import java.util.Scanner;
 
-	public static void main(String[] args) {
-		System.out.println("Iniciadno el programa");
-		try {
-			Controlador.start();
-		} catch (SQLException | IOException e) {
-			e.printStackTrace();
+import modelo.Coche;
+
+public class Vista {
+
+	private static Scanner sc = new Scanner(System.in);
+
+	public static String askData(String s) {
+		if (!s.equals("")) {
+			System.out.println(s);
 		}
+		return sc.nextLine();
+	}
+
+	public static void printErrLn(String s) {
+		System.err.println(s);
+	}
+
+	public static void print(String s) {
+		System.out.print(s);
+	}
+
+	public static void printErr(String s) {
+		System.err.print(s);
+	}
+
+	public static void printLn(String s) {
+		System.out.println(s);
+	}
+
+	public static void retornoLinea() {
+		System.out.println();
 	}
 
 }

@@ -3,13 +3,8 @@
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.SQLException;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.security.auth.login.Configuration;
-
-import org.hibernate.Query;
-import org.hibernate.Session;
 
 import org.hibernate.Query;
 import org.hibernate.Session;

@@ -1,7 +1,4 @@
-import controlador.Controlador;
-
-import java.io.IOException;
-import java.sql.SQLException;
+package modelo;
 
 /*
  *Creado por Elias Periañez
@@ -15,15 +12,18 @@ ________________________________________________________________________________
  *This file is under the Creative Commons Attribution 4.0 International (More info here https://creativecommons.org/licenses/by/4.0/)
  */
 
-public class Main {
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 
-	public static void main(String[] args) {
-		System.out.println("Iniciadno el programa");
-		try {
-			Controlador.start();
-		} catch (SQLException | IOException e) {
-			e.printStackTrace();
-		}
+public class Configurador {
+
+	public static Properties getMenuData() throws IOException {
+		FileInputStream fs = new FileInputStream(new File("menu.ini"));
+		Properties pr = new Properties();
+		pr.load(fs);
+		return pr;
 	}
 
 }
