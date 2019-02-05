@@ -20,12 +20,12 @@ ________________________________________________________________________________
 
 public interface Data {
 
-	public void updateCoche(Coche ch);
+	public void updateCoche(Coche ch, Coche oldCoche);
 	public void uploadCoche(Coche ch) throws SQLException, IOException;
 	public void deleteCoche(Coche ch);
 
 	public HashMap<Integer, Coche> getCoche() throws SQLException, FileNotFoundException;
-	public void updateMarca(Marca mc);
+	public void updateMarca(Marca newMarca, Marca oldMarca);
 	public void uploadMarca(Marca mc) throws SQLException, IOException;
 	public void deleteMarca(Marca mc);
 	public HashMap<Integer, Marca> getMarca() throws SQLException;

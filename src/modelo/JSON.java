@@ -32,12 +32,6 @@ public class JSON implements Data{
 	}
 
 	@Override
-	public void updateMarca(Marca mc) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public void uploadMarca(Marca mc) throws SQLException, IOException {
 		// TODO Auto-generated method stub
 		
@@ -53,6 +47,12 @@ public class JSON implements Data{
 	public HashMap<Integer, Marca> getMarca() throws SQLException {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void updateMarca(Marca newMarca, Marca oldMarca) {
+		// TODO Apéndice de método generado automáticamente
+		
 	}
 
 }

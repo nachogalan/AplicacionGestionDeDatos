@@ -60,8 +60,8 @@ public class BBDD implements Data {
 	}
 
 	@Override
-	public void updateCoche(Coche ch) {
-		conexion.editarDatos(this.tableCoche, this.columnasCoches, this.getArFromCar(ch), "ID =" + ch.getId());
+	public void updateCoche(Coche ch, Coche oldCoche) {
+		conexion.editarDatos(this.tableCoche, this.columnasCoches, this.getArFromCar(ch), "ID =" + oldCoche.getId());
 	}
 
 	@Override
@@ -95,8 +95,8 @@ public class BBDD implements Data {
 	}
 
 	@Override
-	public void updateMarca(Marca mc) {
-		conexion.editarDatos(this.tableMarca, this.columnasMarcas, this.getArFromMarca(mc), "ID =" + mc.getId_fabricante());
+	public void updateMarca(Marca marca, Marca oldMarca) {
+		conexion.editarDatos(this.tableMarca, this.columnasMarcas, this.getArFromMarca(marca), "ID =" + oldMarca.getId_fabricante());
 	}
 
 	@Override
