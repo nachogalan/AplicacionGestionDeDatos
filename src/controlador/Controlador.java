@@ -164,6 +164,7 @@ public class Controlador {
 	}
 
 	private static Marca getExistingMarca(Data caller) throws SQLException {
+		Vista.printLn("Elige la marca existente");
 		Marca result = new Marca();
 		HashMap<Integer, Marca> mcArray = caller.getMarca();
 		Map<Integer, Marca> mp = mcArray;
@@ -171,7 +172,7 @@ public class Controlador {
 
 		int i = 0;
 		while (datos.hasNext()) {
-			System.out.println(i + "." + datos.next().getValue());
+			Vista.printLn(i + "." + datos.next().getValue());
 			i++;
 		}
 
@@ -237,6 +238,7 @@ public class Controlador {
 	}
 
 	private static Coche getExistingCar(Data caller) throws FileNotFoundException, SQLException {
+		Vista.printLn("Elige el coche existente");
 		Coche result = new Coche();
 		HashMap<Integer, Coche> mcArray = caller.getCoche();
 		Map<Integer, Coche> mp = mcArray;
@@ -244,7 +246,7 @@ public class Controlador {
 
 		int i = 0;
 		while (datos.hasNext()) {
-			System.out.println(i + "." + datos.next().getValue());
+			Vista.printLn(i + "." + datos.next().getValue());
 			i++;
 		}
 

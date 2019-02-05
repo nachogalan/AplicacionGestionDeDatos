@@ -32,7 +32,7 @@ public class Hibernate implements Data {
 	
 	
 	@Override
-	public void updateCoche(Coche ch) {
+	public void updateCoche(Coche ch, Coche oldCoche) {
 		this.beginTransaction();
 		s.update(ch);
 	}

@@ -36,8 +36,8 @@ public class Mongo implements Data {
 		Document mcDoc = new Document();
 		
 		mcDoc.append("ID_Fabricante", ch.getMarca().getId_fabricante());
-		newDocument.put("Nombre", ch.getMarca().getNombre());
-		newDocument.put("Sede", ch.getMarca().getSede());
+		mcDoc.put("Nombre", ch.getMarca().getNombre());
+		mcDoc.put("Sede", ch.getMarca().getSede());
 		
 		newDocument.put("ID", ch.getId());
 		newDocument.put("Nombre", ch.getNombre());
@@ -46,9 +46,19 @@ public class Mongo implements Data {
 		newDocument.put("Caracteristica2", ch.getCaracteristica2());
 		newDocument.put("Marca", mcDoc);
 
-
-		Document searchQuery = new Document().append("ID", ch.getId());
-		db.getCollection("marcas").updateOne(searchQuery, newDocument);
+		
+		Document oldMcDoc = new Document();
+		oldMcDoc.append("ID_Fabricante", oldCoche.getMarca().getId_fabricante());
+		oldMcDoc.put("Nombre", oldCoche.getMarca().getNombre());
+		oldMcDoc.put("Sede", oldCoche.getMarca().getSede());
+		Document searchQuery = new Document().append("ID", oldCoche.getId());
+		searchQuery.put("Nombre", oldCoche.getNombre());
+		searchQuery.put("Descripcion", oldCoche.getDescripcion());
+		searchQuery.put("Caracteristica1", oldCoche.getCaracteristica1());
+		searchQuery.put("Caracteristica2", oldCoche.getCaracteristica2());
+		searchQuery.put("Marca", oldMcDoc);
+		
+		db.getCollection("coches").replaceOne(searchQuery, newDocument);
 	}
 
 	@Override
@@ -122,7 +132,7 @@ public class Mongo implements Data {
 		newDocument.put("Nombre", marca.getNombre());
 		newDocument.put("Sede", marca.getSede());
 		Document searchQuery = new Document().append("ID_Fabricante", oldMarca.getId_fabricante());
-		db.getCollection("marcas").updateOne(searchQuery, newDocument);
+		db.getCollection("marcas").replaceOne(searchQuery, newDocument);
 	}
 
 	@Override
